@@ -1,10 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnbv0choy2tv4"]
+[gd_scene load_steps=7 format=3 uid="uid://dnbv0choy2tv4"]
 
+[ext_resource type="Script" uid="uid://g0oqdpm7dx3b" path="res://Scenes/html_tutorial.gd" id="1_etwry"]
 [ext_resource type="Texture2D" uid="uid://cchw0nrt5a14n" path="res://Art Assets/bground.png" id="1_hymq0"]
 [ext_resource type="FontFile" uid="uid://ctac5wch5ukxl" path="res://Art Assets/VCR_OSD_MONO_1.001.ttf" id="2_cuv4i"]
+[ext_resource type="Texture2D" uid="uid://buv67q5krfss" path="res://Art Assets/stonebutton.png" id="3_cuv4i"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_etwry"]
 texture = ExtResource("1_hymq0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_27kcv"]
+texture = ExtResource("3_cuv4i")
+texture_margin_left = 20.0
+texture_margin_top = 10.0
+texture_margin_right = 20.0
+texture_margin_bottom = 15.0
+region_rect = Rect2(67.867714, 53.897186, 184.20135, 72.21155)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -13,6 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_etwry")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -48,3 +59,28 @@ theme_override_font_sizes/font_size = 150
 text = "TUTORIAL"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = 37.0
+offset_right = 184.0
+offset_bottom = 98.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.9529412, 0.77254903, 0.46666667, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_cuv4i")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxTexture_27kcv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_27kcv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_27kcv")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_27kcv")
+text = "START TUTORIAL"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
