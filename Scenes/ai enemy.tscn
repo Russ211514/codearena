@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://crs5v8d8ka3i8"]
+
+[ext_resource type="Texture2D" uid="uid://cltk0tjaxdkxk" path="res://icon.svg" id="1_51lpc"]
+[ext_resource type="Script" uid="uid://c1dcwshg8hcgw" path="res://Scenes/ai_enemy.gd" id="1_rehnj"]
+[ext_resource type="Script" uid="uid://ccvuqjrg0wdnu" path="res://Scenes/enemy.gd" id="3_sfuq7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8dgk0"]
+size = Vector2(129, 129)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_rehnj")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(92, 575)
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+position = Vector2(-22, 3)
+texture = ExtResource("1_51lpc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-22.5, 3.5)
+shape = SubResource("RectangleShape2D_8dgk0")
+
+[node name="Enemy" type="CharacterBody2D" parent="."]
+position = Vector2(1110, 62)
+script = ExtResource("3_sfuq7")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy"]
+modulate = Color(0.91227055, 4.7168137e-06, 6.738305e-07, 1)
+position = Vector2(-22, 3)
+texture = ExtResource("1_51lpc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
+position = Vector2(-22, 3)
+shape = SubResource("RectangleShape2D_8dgk0")
