@@ -108,7 +108,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_6rtt2")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_6rtt2")
 theme_override_styles/hover = SubResource("StyleBoxTexture_6rtt2")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_6rtt2")
-text = "I dont understand/Explain like im a kid"
+text = "I dont understand"
 autowrap_mode = 2
 
 [node name="Next" type="Button" parent="."]
