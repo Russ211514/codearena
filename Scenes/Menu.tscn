@@ -184,7 +184,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_dlksc")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_dlksc")
 text = "X"
 
-[node name="HSlider" type="HSlider" parent="Options menu"]
+[node name="Master volume" type="HSlider" parent="Options menu"]
 layout_mode = 0
 offset_left = 82.0
 offset_top = 65.0
